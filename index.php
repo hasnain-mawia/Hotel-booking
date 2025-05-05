@@ -1,17 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hotel Booking Syestem</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>  
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
+<?php include_once('./common/header.php');?>
   <body>
     <!-- -------------------- Header [Start] ------------------------ -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white px-lg-3  py-lg-2 shadow-sm sticky-top">
@@ -45,7 +32,7 @@
     <!-- -------------------- Header [End] ------------------------ -->
 
     <!-- -------------------- Slider [Start] ------------------------ -->
-     <div class="container-fluid px-lg-4 mt-4">
+     <div class="container-fluid">
       <!-- Swiper -->
   <div class="swiper swiper-container">
     <div class="swiper-wrapper">
@@ -178,11 +165,11 @@
       <div class="row justify-content-evenly px-lg-0 px-md-0 px-5 column-gap-1">
         <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
           <img src="./images/facilities/1.svg" width="70px" alt="">
-          <h5 class="mt-3">Wifi</h5>
+          <h5 class="mt-3">Heater</h5>
         </div>
         <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
           <img src="./images/facilities/2.svg" width="70px" alt="">
-          <h5 class="mt-3">Wifi</h5>
+          <h5 class="mt-3">Telivision</h5>
         </div>
         <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
           <img src="./images/facilities/3.svg" width="70px" alt="">
@@ -190,11 +177,11 @@
         </div>
         <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
           <img src="./images/facilities/4.svg" width="70px" alt="">
-          <h5 class="mt-3">Wifi</h5>
+          <h5 class="mt-3">Baadroom</h5>
         </div>
         <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
           <img src="./images/facilities/5.svg" width="70px" alt="">
-          <h5 class="mt-3">Wifi</h5>
+          <h5 class="mt-3">Aircondition</h5>
         </div>
         <div class="col-lg-12 text-center mt-5">
           <a href="#" class="btn btn-sm btn-outline-dark rounded fw-bold shadow-none">More Facilities</a>
@@ -206,40 +193,85 @@
     <!-- -------------------- Testimonail [Start] ------------------------ -->
     
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Testimonail</h2>
-    <div class="container">
+    <div class="container mt-5">
       <div class="swiper swiper-testimonail">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <div class="swiper-slide bg-white p-4">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="./images/about/customers.svg" style="width:50px;"/>
+            <h6 class="text-dark">Random user1</h6>
           </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, architecto quae aliquid veritatis minima aperiam?</p>  
+          <div class="rating">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+          </div>  
+          </div>  
+          <div class="swiper-slide bg-white p-4">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="./images/about/customers.svg" style="width:50px;"/>
+            <h6 class="text-dark">Random user1</h6>
           </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, architecto quae aliquid veritatis minima aperiam?</p>  
+          <div class="rating">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+          </div>  
+          </div>  
+          <div class="swiper-slide bg-white p-4">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="./images/about/customers.svg" style="width:50px;"/>
+            <h6 class="text-dark">Random user1</h6>
           </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, architecto quae aliquid veritatis minima aperiam?</p>  
+          <div class="rating">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+          </div>  
+          </div>  
+        </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Reach Us</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 mb-lg-0 mb-3 bg-white">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28883.914969328696!2d55.281647113283384!3d25.186714120388775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f42a59ed40959%3A0x61508fff004858b8!2sZabeel%20Palace!5e0!3m2!1sen!2s!4v1746458969904!5m2!1sen!2s" class="w-100" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-lg-4 col-md-4 bg-white p-4 rounded mb-4">
+          <h5 class="fs-3">Call us</h5>
+            <a href="tel:+94-94949494490" class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-telephone-fill fs-5"></i> +94-94949494490</a><br>
+            <a href="tel:+94-94949494490" class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-whatsapp fs-5"></i></i> +94-94949494490</a>
+          <h5 class="fs-3">Follow Us</h5>
+          <span class="badge rounded-pill bg-light text-dark"><i class="bi bi-facebook fs-5"></i></span>
+          <span class="badge rounded-pill bg-light text-dark"><i class="bi bi-instagram fs-5"></i></span>
+          <span class="badge rounded-pill bg-light text-dark"><i class="bi bi-linkedin fs-5"></i></span>
+          <span class="badge rounded-pill bg-light text-dark"><i class="bi bi-twitter-x fs-5"></i></span>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- -------------------- Testimonail [End] ------------------------ -->
 
     <!-- -------------------- Login Modal [Start] ------------------------ -->
@@ -353,17 +385,32 @@
       effect: "coverflow",
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: "auto",
+      slidesPerView: "3",
       coverflowEffect: {
         rotate: 50,
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: true,
+        loop:true,
+        slideShadows: false,
       },
       pagination: {
         el: ".swiper-pagination",
       },
+      breakpoints:{
+        320 :{
+          slidesPerView : 1,
+        },
+        640 :{
+          slidesPerView : 1,
+        },
+        768 :{
+          slidesPerView : 2,
+        },
+        1024 :{
+          slidesPerView : 3,
+        },
+      }
     });
   </script>
   </body>
