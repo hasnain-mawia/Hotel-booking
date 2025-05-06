@@ -1,3 +1,8 @@
+:root{
+    --teal:#27c1ac;
+    --teal_hover:#279e8c;
+}
+
 * {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -9,13 +14,25 @@
 }
 
 .custom-bg {
-    background-color: #27c1ac;
+    background-color: var(--teal);
 }
 
 .custom-bg:hover {
-    background-color: #279e8c;
+    background-color: var(--teal_hover);
 }
-
+.h-line{
+    width: 150px;
+    margin: 0 auto 20px auto;
+    height: 1.7px;
+}
+.pop:hover{
+    border-top-color: var(--teal) !important;
+    transform: scale(1.02);
+    transition: all 0.4s;
+}
+.box{
+    border-top-color:var(--teal) !important;
+}
 .avalibilty-form {
     margin-top: -50px;
     position: relative;
