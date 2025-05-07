@@ -1,5 +1,15 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Home - Hotel Booking Syestem</title>
+  <?php include_once('./common/links.php'); ?>
+</head>
 <?php include_once('./common/header.php');?>
-  <body>
+<body>
       <!-- -------------------- Slider [Start] ------------------------ -->
      <div class="container-fluid">
       <!-- Swiper -->

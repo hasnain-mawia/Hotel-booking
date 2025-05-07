@@ -1,0 +1,71 @@
+:root{
+    --teal:#27c1ac;
+    --teal_hover:#279e8c;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.h-font {
+    font-family: "Merienda", cursive;
+}
+
+.custom-bg {
+    background-color: var(--teal)!important;
+}
+
+.custom-bg:hover {
+    background-color: var(--teal_hover)!important;
+}
+.h-line{
+    width: 150px;
+    margin: 0 auto 20px auto;
+    height: 1.7px;
+}
+.pop:hover{
+    border-top-color: var(--teal) !important;
+    transform: scale(1.02);
+    transition: all 0.4s;
+}
+.box{
+    border-top-color:var(--teal) !important;
+}
+.avalibilty-form {
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+.swiper {
+    width: 100%;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    /* width: 300px;
+    height: 300px; */
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .login-form{
+    position: absolute;
+    top: 50%;
+    width: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+@media screen and (max-width : 575px) {
+    .avalibilty-form {
+        margin: 0px;
+        padding: 0 35px;
+    }
+}

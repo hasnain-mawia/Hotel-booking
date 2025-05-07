@@ -1,6 +1,15 @@
-<?php include_once('./common/header.php');?>   
+<!doctype html>
+<html lang="en">
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Our Facilities - Hotel Booking Syestem</title>
+  <?php include_once('./common/links.php'); ?>
+</head>
+<?php include_once('./common/header.php');?>
+<body>
 
     <!-- -------------------- Facilities [Start] ------------------------ -->
     <div class="my-5 px-4">
