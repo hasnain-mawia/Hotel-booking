@@ -28,11 +28,18 @@
 <?php 
 if(isset($_POST['login'])){
     // echo "Button Clicked";
-    $username = $_POST['admin_name'];
-    $password = $_POST['admin_password'];
-    echo $username ." ". $password;
-};
+    // $username = $_POST['admin_name'];
+    // $password = $_POST['admin_password'];
+    // echo $username ." ". $password;
+    $frm_data = filteration($_POST);
+    // echo "<h1>$frm_data[admin_name]</h1>";
+    // echo "<h1>$frm_data[admin_password]</h1>";
+    $query = "SELECT * FROM `admin_cred ` WHERE `admin_name ` = ? AND `admin_password` = ? ";
+    $values = [$frm_data['admin_name'], $frm_data['admin_password']];
+    
+    select($query, $values, 'ss');
 
+}; 
 
 ?>
 
