@@ -8,7 +8,6 @@
     font-weight: 400;
     font-style: normal;
 }
-
 .h-font {
     font-family: "Merienda", cursive;
 }
@@ -61,6 +60,11 @@
     width: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .custom-alert{
+    position: fixed!important;
+    top: 25px!important;
+    right: 25px!important;
   }
 
 @media screen and (max-width : 575px) {
