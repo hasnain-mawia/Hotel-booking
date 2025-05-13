@@ -1,5 +1,12 @@
 <?php include_once('../admin/includes/db_config.php')?>
 <?php include_once('../admin/includes/essiantails.php')?>
+<?php
+ session_start();
+    if((isset($_SESSION['adminLogin'])) && ($_SESSION['adminLogin'] == true)){
+       redirect('dashboard');
+    } 
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +42,6 @@ if(isset($_POST['login'])){
     // print_r($res);
     if($res-> num_rows == 1){
         $row = mysqli_fetch_assoc($res);
-        session_start();
         $_SESSION['adminLogin'] = true;
         $_SESSION['adminId'] = $row['sr_no'];
         alert('success', 'Login Successfully ');

@@ -1,6 +1,7 @@
 <?php
 require('./includes/essiantails.php');
 adminlogin();
+ session_regenerate_id(true);
 ?>
 
 <!DOCTYPE html>
