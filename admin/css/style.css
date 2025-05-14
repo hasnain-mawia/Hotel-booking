@@ -63,13 +63,26 @@
   }
   .custom-alert{
     position: fixed!important;
-    top: 25px!important;
+    top: 80px!important;
     right: 25px!important;
   }
-
+#dashboard-menu{
+    position: fixed;
+    height: 100%;
+    
+  }
 @media screen and (max-width : 575px) {
     .avalibilty-form {
         margin: 0px;
         padding: 0 35px;
     }
+}
+@media screen and (max-width : 992px) {
+    #dashboard-menu{
+    height: auto;
+    width:100%;
+  }
+  #main-content{
+    margin-top: 70px;
+  }
 }

@@ -2,12 +2,10 @@
 <?php include_once('../admin/includes/essiantails.php')?>
 <?php
  session_start();
-    if((isset($_SESSION['adminLogin'])) && ($_SESSION['adminLogin'] == true)){
+    if((isset($_SESSION['adminLogin']) && $_SESSION['adminLogin'] == true)){
        redirect('dashboard');
     } 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,11 +46,11 @@ if(isset($_POST['login'])){
         redirect('dashboard');
 
     }else{
-        alert('errors', 'Login Failed - Invalid Crediantials');
+       echo"<script> alertPop('errors', 'Login Failed - Invalid Crediantials')</script>";
     }
 }; 
 ?>
 
-<?php include_once('../assets/js/scripts.js'); ?>
+<?php include_once('../assets/js/scripts.php'); ?>
 </body>
 </html>
