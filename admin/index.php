@@ -46,7 +46,7 @@ if(isset($_POST['login'])){
         redirect('dashboard');
 
     }else{
-       echo"<script> alertPop('errors', 'Login Failed - Invalid Crediantials')</script>";
+       alert('errors', 'Login Failed - Invalid Crediantials');
     }
 }; 
 ?>
