@@ -63,7 +63,7 @@ session_regenerate_id(true);
                                 </div>
                                 <div class="mb-4">
                                     <h5 class="card-subtitle mb-1 fw-bold">Google Map</h5>
-                                    <p class="card-text" id="gmap">No Customers will be allowed to booking when shutdown mode is on</p>
+                                    <p class="card-text" id="gmap"></p>
                                 </div>
                                 <div class="mb-4">
                                     <h5 class="card-subtitle mb-1 fw-bold">Phone Numbers</h5>
@@ -73,7 +73,7 @@ session_regenerate_id(true);
                                     </p>
                                     <p class="card-text">
                                         <i class="bi bi-telephone-fill fs-5"></i>
-                                        <span id="pn1"></span>
+                                        <span id="pn2"></span>
                                     </p>
                                 </div>
                                 <div class="mb-4">
@@ -86,24 +86,23 @@ session_regenerate_id(true);
                                     <h5 class="card-subtitle mb-1 fw-bold">Social Links</h5>
                                     <p class="card-text">
                                         <i class="bi bi-facebook fs-5 me-1"></i>
-                                        <span id="pn1"></span>
+                                        <span id="fb"></span>
                                     </p>
                                     <p class="card-text">
                                         <i class="bi bi-instagram fs-5 me-1"></i>
-                                        <span id="pn1"></span>
+                                        <span id="ins"></span>
                                     </p>
                                     <p class="card-text">
                                         <i class="bi bi-twitter fs-5 me-1"></i>
-                                        <span id="pn1"></span>
+                                        <span id="tw"></span>
                                     </p>
                                 </div>
                                 <div class="mb-4">
                                     <h5 class="card-subtitle mb-1 fw-bold">i frame</h5>
-                                    <iframe id="iframe" class="border p-2 w-100" src="" frameborder="0" loading="lazy"></iframe>
+                                    <iframe id="iframe" class="border w-100" src="" frameborder="0" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
-                        <p class="card-text">No Customers will be allowed to booking when shutdown mode is on</p>
                     </div>
                 </div>
             </div>
@@ -139,6 +138,90 @@ session_regenerate_id(true);
     </div>
     <!-- Edit Modal -->
 
+    <!-- Contacts Modal -->
+    <div class="modal fade" id="contacts-settings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <form id="contact-s-form">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Contacts Settings</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Address</label>
+                                        <input type="text" name="address" id="address_inp" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Google Map</label>
+                                        <input type="text" name="gmap" id="gmap_inp" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Phone Number</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text shadow-none" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
+                                            </div>
+                                            <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
+                                            </div>
+                                            <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Email</label>
+                                        <input type="email" name="email" id="email_inp" class="form-control shadow-none" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                     <div class="mb-3">
+                                        <label class="form-label fw-bold">Phone Number</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text shadow-none" id="basic-addon1"><i class="bi bi-facebook fs-5 me-1"></i></span>
+                                            </div>
+                                            <input type="text" name="fb" id="fb_inp" class="form-control shadow-none">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-instagram fs-5 me-1"></i></span>
+                                            </div>
+                                            <input type="text" name="ins" id="ins_inp" class="form-control shadow-none">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-twitter fs-5 me-1"></i></span>
+                                            </div>
+                                            <input type="text" name="tw" id="tw_inp" class="form-control shadow-none">
+                                        </div>
+                                        <div class="mb-3">
+                                        <label class="form-label fw-bold">Iframe</label>
+                                        <input type="text" name="iframe" id="iframe_inp" class="form-control shadow-none" required>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="contacts_inp(contacts_data)" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn custom-bg text-white shadow-none">Save</button>
+                    </div>
+                </div>
+        </div>
+        </form>
+    </div>
+    <!-- Edit Modal -->
+
+
+
+
     <?php require('../common/links.php'); ?>
     <?php require('../assets/js/scripts.php'); ?>
     <script>
@@ -154,7 +237,8 @@ session_regenerate_id(true);
             e.preventDefault();
             upd_general(site_title_inp.value, site_about_inp.value)
         })
-
+        
+        let contact_s_form = document.getElementById('contact-s-form');
 
 
         function get_general() {
@@ -255,9 +339,73 @@ session_regenerate_id(true);
             xhr.send('get_general');
         }
 
+        function get_contacts() {
+            let contacts_p_id = ['address', 'gmap', 'pn1', 'pn2', 'email', 'fb', 'ins', 'tw'];
+            let iframe = document.getElementById('iframe');
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "ajax/settings_crud.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onload = function() {
+                contacts_data = JSON.parse(this.responseText);
+                contacts_data = Object.values(contacts_data);
+
+                for (i = 0; i < contacts_p_id.length; i++) {
+                    document.getElementById(contacts_p_id[i]).innerText = contacts_data[i + 1];
+                }
+                iframe.src = contacts_data[9];
+                contacts_inp(contacts_data);
+            }
+            xhr.send('get_contacts');
+        }
+
+        function contacts_inp(data){
+            let contacts_inp_id = ['address_inp', 'gmap_inp', 'pn1_inp', 'pn2_inp', 'email_inp', 'fb_inp', 'ins_inp', 'tw_inp', 'iframe_inp'];
+            for(i=0; i<contacts_inp_id.length;i++){
+                document.getElementById(contacts_inp_id[i]).value = data[i+1];
+            }
+        }
+        
+        contact_s_form.addEventListener('submit', function(e){
+            e.preventDefault();
+            upd_contacts();
+        })
+
+        function upd_contacts(){
+            let index = ['address', 'gmap', 'pn1', 'pn2', 'email', 'fb', 'ins', 'tw', 'iframe'];
+            let contacts_inp_id = ['address_inp', 'gmap_inp', 'pn1_inp', 'pn2_inp', 'email_inp', 'fb_inp', 'ins_inp', 'tw_inp', 'iframe_inp'];
+
+            let data_str = "";
+            for(i=0; i<index.length; i++){
+                data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value +'&';
+            }
+            data_str += "upd_contacts";
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "ajax/settings_crud.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            
+            xhr.onload = function() {
+            var myModalEl = document.getElementById('contacts-settings');
+            var modal = bootstrap.Modal.getInstance(myModalEl); // Returns a Bootstrap modal instance
+            modal.hide();    
+            
+            console.log(this.responseText);
+
+             if (this.responseText == 1) {
+                    alertPop('success', 'Changes Updated Successfully');
+                    get_contacts();
+                } else {
+                    alertPop('error', 'No Changes Found');
+                }      
+            }
+             xhr.send(data_str);
+        }
 
         window.onload = function() {
             get_general();
+            get_contacts();
         }
     </script>
 </body>
