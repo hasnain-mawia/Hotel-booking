@@ -1,6 +1,6 @@
 <?php
 
-define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/hotel-management/assets/images/');
+define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/hotel-booking/assets/images/');
 define('ABOUT_FOLDER', 'about/');
 
 function adminlogin(){

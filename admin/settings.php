@@ -465,17 +465,17 @@ session_regenerate_id(true);
             xhr.open("POST", "ajax/settings_crud.php", true);
 
             xhr.onload = function() {
-                console.log(this.responseText);
-                // var myModalEl = document.getElementById('general-settings');
-                // var modal = bootstrap.Modal.getInstance(myModalEl); // Returns a Bootstrap modal instance
-                // modal.hide();
+                //console.log(this.responseText);
+                var myModalEl = document.getElementById('team-settings');
+                var modal = bootstrap.Modal.getInstance(myModalEl); // Returns a Bootstrap modal instance
+                modal.hide();
 
-                // if (this.responseText == 1) {
-                //     alertPop('success', 'Changes Updated Successfully');
-                //     get_general();
-                // } else {
-                //     alertPop('error', 'No Changes Found');
-                // }
+                if (this.responseText == 1) {
+                    alertPop('success', 'Team Picture Uploaded Successfully');
+                    get_general();
+                } else {
+                    alertPop('error', 'No Changes Found');
+                }
             }
             xhr.send(data);
 
