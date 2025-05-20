@@ -105,6 +105,49 @@ session_regenerate_id(true);
                         </div>
                     </div>
                 </div>
+
+                <!-- Team management [start] -->
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title m-0">Team management</h5>
+                            <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#team-settings"><i class="bi bi-plus-square"></i> Add</button>
+                        </div>
+                        <div class="row" id="team-data">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team management Modal [start] -->
+                <div class="modal fade" id="team-settings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <form id="team-s-form">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add Team Member</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Name</label>
+                                        <input type="text" name="member_name" id="member_name_inp" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Picture</label>
+                                        <input type="file" name="member_picture" id="member_picture_inp" class="form-control shadow-none" accept=".jpg, .png, .webp, .jpeg" required>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" onclick="" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn custom-bg text-white shadow-none">Save</button>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+                <!-- Team management Modal [End] -->
+
+                <!-- Team management [End] -->
             </div>
 
         </div>
@@ -179,7 +222,7 @@ session_regenerate_id(true);
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                     <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label fw-bold">Phone Number</label>
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
@@ -200,9 +243,9 @@ session_regenerate_id(true);
                                             <input type="text" name="tw" id="tw_inp" class="form-control shadow-none">
                                         </div>
                                         <div class="mb-3">
-                                        <label class="form-label fw-bold">Iframe</label>
-                                        <input type="text" name="iframe" id="iframe_inp" class="form-control shadow-none" required>
-                                    </div>
+                                            <label class="form-label fw-bold">Iframe</label>
+                                            <input type="text" name="iframe" id="iframe_inp" class="form-control shadow-none" required>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -229,6 +272,10 @@ session_regenerate_id(true);
 
         let site_title_inp = document.getElementById('site_title_inp');
         let site_about_inp = document.getElementById('site_about_inp');
+        
+        let member_picture = document.getElementById('team-s-form');
+        let member_name_inp = document.getElementById('member_name_inp');
+        let member_picture_inp = document.getElementById('member_picture_inp');
 
 
 
@@ -237,7 +284,7 @@ session_regenerate_id(true);
             e.preventDefault();
             upd_general(site_title_inp.value, site_about_inp.value)
         })
-        
+
         let contact_s_form = document.getElementById('contact-s-form');
 
 
@@ -360,47 +407,78 @@ session_regenerate_id(true);
             xhr.send('get_contacts');
         }
 
-        function contacts_inp(data){
+        function contacts_inp(data) {
             let contacts_inp_id = ['address_inp', 'gmap_inp', 'pn1_inp', 'pn2_inp', 'email_inp', 'fb_inp', 'ins_inp', 'tw_inp', 'iframe_inp'];
-            for(i=0; i<contacts_inp_id.length;i++){
-                document.getElementById(contacts_inp_id[i]).value = data[i+1];
+            for (i = 0; i < contacts_inp_id.length; i++) {
+                document.getElementById(contacts_inp_id[i]).value = data[i + 1];
             }
         }
-        
-        contact_s_form.addEventListener('submit', function(e){
+
+        contact_s_form.addEventListener('submit', function(e) {
             e.preventDefault();
             upd_contacts();
         })
 
-        function upd_contacts(){
+        function upd_contacts() {
             let index = ['address', 'gmap', 'pn1', 'pn2', 'email', 'fb', 'ins', 'tw', 'iframe'];
             let contacts_inp_id = ['address_inp', 'gmap_inp', 'pn1_inp', 'pn2_inp', 'email_inp', 'fb_inp', 'ins_inp', 'tw_inp', 'iframe_inp'];
 
             let data_str = "";
-            for(i=0; i<index.length; i++){
-                data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value +'&';
+            for (i = 0; i < index.length; i++) {
+                data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value + '&';
             }
             data_str += "upd_contacts";
 
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            
-            xhr.onload = function() {
-            var myModalEl = document.getElementById('contacts-settings');
-            var modal = bootstrap.Modal.getInstance(myModalEl); // Returns a Bootstrap modal instance
-            modal.hide();    
-            
-            console.log(this.responseText);
 
-             if (this.responseText == 1) {
+            xhr.onload = function() {
+                var myModalEl = document.getElementById('contacts-settings');
+                var modal = bootstrap.Modal.getInstance(myModalEl); // Returns a Bootstrap modal instance
+                modal.hide();
+
+                console.log(this.responseText);
+
+                if (this.responseText == 1) {
                     alertPop('success', 'Changes Updated Successfully');
                     get_contacts();
                 } else {
                     alertPop('error', 'No Changes Found');
-                }      
+                }
             }
-             xhr.send(data_str);
+            xhr.send(data_str);
+        }
+
+        member_picture.addEventListener('submit', function(e){
+            e.preventDefault();
+            add_member();
+        })    
+
+        function add_member(){
+            let data = new FormData();
+            data.append('name', member_name_inp.value);
+            data.append('picture', member_picture_inp.files[0]);
+            data.append('add_member', '');
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "ajax/settings_crud.php", true);
+
+            xhr.onload = function() {
+                console.log(this.responseText);
+                // var myModalEl = document.getElementById('general-settings');
+                // var modal = bootstrap.Modal.getInstance(myModalEl); // Returns a Bootstrap modal instance
+                // modal.hide();
+
+                // if (this.responseText == 1) {
+                //     alertPop('success', 'Changes Updated Successfully');
+                //     get_general();
+                // } else {
+                //     alertPop('error', 'No Changes Found');
+                // }
+            }
+            xhr.send(data);
+
         }
 
         window.onload = function() {
